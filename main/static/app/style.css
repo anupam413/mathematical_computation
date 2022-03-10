@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1d1e2200;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: #079cff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff;
+}
+
+body {
+  background-color: #FADADD;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#wrapper {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+}
+
+#draw {
+  position: absolute;
+  border: solid 1px #ccc;
+  border-bottom: 2px solid #ccc;
+  z-index: 1;
+  cursor: pointer;
+}
+#draw-lines {
+  background-color: #fff;
+  position: absolute;
+  z-index: -2;
+}
+
+#video {
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+  filter: opacity(100%);
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 85px;
+  align-self: center;
+}
+
+@media (max-width: 1500px) {
+  .tools {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    flex-basis: 100%;
+  }
+}
+
+.graph {
+  width: auto;
+  height: 100vh;
+}
+
+.tools .color-field {
+  height: 50px;
+  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+
+.tools .color-field:hover {
+  border: 3px solid #ffc107;
+}
+
+.tools .button {
+  background-color: #1683ff;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #ffc107;
+  align-self: center;
+  margin-bottom: 20px;
+  transition: background-color, color 0.5s;
+}
+
+.tools .button:hover {
+  background-color: #ffffff;
+  color: #1683ff;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.color-picker {
+  align-self: center;
+  margin: 0 10px;
+  height: 50px;
+}
+
+.pen-range {
+  align-self: center;
+  margin: 0 10px;
+}
+
+redChalk_button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999;
+  top: 620px;
+  left: 160px;
+}
+greenChalk_button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999;
+  top: 620px;
+  left: 400px;
+}
+blueChalk_button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999;
+  top: 620px;
+  left: 480px;
+}
+yellowChalk_button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999;
+  top: 620px;
+  left: 320px;
+}
+orangeChalk_button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999;
+  top: 620px;
+  left: 240px;
+}
+pinkChalk_button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999;
+  top: 620px;
+  left: 560px;
+}
+whiteChalk_button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999;
+  top: 620px;
+  left: 80px;
+}
+
+.latex {
+  display: flex;
+  flex-direction: row;
+}
+
+#upload_image {
+  position: relative;
+  width: 100%;
+}
+
+.submit-button {
+  margin: 0 17px 0 10px;
+}
+
+.pdf-section {
+  background-color: #5ea4ff;
+}
+
+.parent {
+  position: relative;
+}
+
+.parent .del-button {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #9e6a6a;
+  color: #fff;
+  font-size: 20px;
+  position: sticky;
+  width: 35px;
+  height: 35px;
+  top: 20px;
+  align-self: flex-end;
+  z-index: 999;
+  transition: color, background-color 0.2s;
+}
+
+.parent .del-button:hover {
+  color: rgb(230, 53, 53);
+  background-color: #9e6a6a;
+}
+
+.parent canvas:hover {
+  box-shadow: #49b4f1;
+}
+
+#pdf-heading {
+  padding-top: 20px;
+}
+
+.expression {
+  position: relative;
+}
+
+.btn-wrapper {
+  width: auto;
+  height: 40px;
+  z-index: 999;
+  position: absolute;
+  right: 30px;
+  margin: 20px 10px 0 0;
+}
+
+.add {
+  position: sticky;
+}
+
+.scrollToTopBtn {
+  background-color: var(--davys);
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 48px;
+  width: 48px;
+
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.myAlert-top {
+  position: fixed;
+  top: 25px;
+  left: 35%;
+  width: 25%;
+  height: 60px;
+  z-index: 999;
+}
+.alert {
+  display: none;
+}

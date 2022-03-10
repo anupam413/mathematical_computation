@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCR FOR MATHEMATICAL COMPUTATION</title>
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'main/main.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <!-- header start -->
+    <header>
+      <nav class="davys-bg navbar navbar-expand navbar-light sticky-top" style="background-color: #51b7ff;">
+        <div class="col-md-8 offset-md-2">
+          <div class="row">
+            <div class="mr-auto navbar-nav">
+              <a class="navbar-brand fa fa-home fa-2x" href="{% url 'home' %}">
+              </a>
+            </div>
+            <div class="navbar-nav">
+              <a href="{% url 'app' %}" class="btn btn-primary btn-outline"
+                >Get started for free</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end of header -->
+
+    <!-- main start -->
+    <main>
+      <!-- landing section -->
+      <section class="landing">
+        <div class="gainsboro-bg">
+          <div class="col-md-8 offset-md-2" style="padding-top: 80px">
+            <h1 class="text-center">
+              aRE MATH problems giving you stress ?? </br><h3 class="text-center" style="color:#51b7ff">USE OUR APP FOR ANSWERS AND VISUALIZATION</h3>
+            </h1>
+            <h4 class="text-center mb-md-4">
+              Our application makes use of gesture recognition and OCR to assist you in
+              solving math effortlessly.
+            </h4>
+            <div class="centered" style="margin-bottom: 15px">
+              <a href="{% url 'app' %}" class="btn btn-primary btn-lg"
+                >Get Started</a
+              >
+            </div>
+            <div class="centered">
+              <img
+                src="{% static 'app/main.gif' %}"
+                background="transparent"
+                speed="1"
+                style="width: 594px; height: 500px; border-radius:75px; margin-bottom: 15px;"
+                loop
+                autoplay
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of landing -->
+
+      <!-- step section -->
+      <section style="background-image: url('static/main/dot-bg.png')">
+        <div class="col-md-8 offset-md-2" style="padding-top: 80px">
+          <h2 class="text-center">
+            MAJOR TASKS DONE:
+          </h2>
+          <hr />
+
+          <div class="row justify-content-around">
+            <div class="col-4">
+              <div class="card text-primary border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">I</div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">DRAW AND WRITE ON THE CANVAS PROVIDED.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 justify-content-center">
+              <img src="{% static 'app/canvas.gif'%}" style="height: 165px; width: 165px;">
+            </div>
+          </div>
+          <div class="row justify-content-around">
+            <div class="col-4">
+              <img src="{% static 'app/graph.gif'%}" style="height: 180px; width: 180px;">
+            </div>
+            <div class="col-4">
+              <div class="card text-primary border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">II</div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">GET SOLUTIONS, GRAPHS AND LATEX FORM OF EXPRESSIONS.</p>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="row justify-content-around">
+            <div class="col-4">
+              <div class="card text-primary border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">III</div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">USE ADD CANVAS TO CONVERT TO PDF FORM.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <img src="{% static 'app/generate.gif'%}" style="height: 165px; width: 165px;">
+            </div>
+          </div>  
+          <div class="row justify-content-around">
+            <div class="col-4">
+              <img src="{% static 'app/download.gif'%}" style="height: 165px; width: 165px;">
+            </div>
+            <div class="col-4">
+              <div class="card text-primary border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">IV</div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">DOWNLOAD THE PDFs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- step section ends  -->
+
+      <!-- footer -->
+      <footer>
+        <div class="davys-bg" style="background-color: #51b7ff;">
+          <div class="step-padding col-md-8 offset-md-2">
+            <div class="centered row">
+              <a style="padding-right:15px;"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+                ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a
+              ><a style="padding-right:15px;"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                ><i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                </a
+              ><a style="padding-right:15px;" href="https://twitter.com/" target="_blank" rel="noreferrer"
+                ><i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                </a 
+              ><a style="padding-right:15px;"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+                ><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a
+              ><a style="padding-right:15px;"
+                href="https://github.com/anupam413/mathematical-computation"
+                target="_blank"
+                rel="noreferrer"
+                ><i class="fa fa-github fa-2x" aria-hidden="true"></i>
+              </a>
+            </div>
+            <h6 class="text-center mb-md-4 gainsboro-color">
+              Copyright © 2022 MINORPROJECT. All rights reserved.
+            </h6>
+          </div>
+        </div>
+      </footer>
+      <!-- footer-ends -->
+    </main>
+  </body>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- lottie-import -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</html>
