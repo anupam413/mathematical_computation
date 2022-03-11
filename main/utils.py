@@ -15,7 +15,7 @@ variables = ['m', 'r', 'x', 'y']
 
 # Loading model
 try:
-    model = keras.models.load_model('deModel_v4ultramin')
+    model = keras.models.load_model('finalmodel')
 except:
     print('Model could not be loaded')
 
