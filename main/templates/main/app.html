@@ -104,6 +104,9 @@
       <!-- tools section -->
       <div class="p-3 all-tools" style="border: 1px solid rgb(255, 255, 255)">
         <div class="tools flex-fill">
+          <button onclick="upload()" type="button" class="button fa fa-solid fa-upload" style="padding-top: 15px;">
+            <input type="file" id="imageLoader" accept="image/png, image/jpg, image/jpeg" style="z-index: 2; height: 50px; width: 50px; opacity: 0;">
+          </button>         
           <button onclick="undo_last()" type="button" class="button">
             <i class="fa fa-solid fa-undo"></i>
           </button>
@@ -250,7 +253,7 @@
             </form>
             <div id="all-canvas">
               <canvas id="draw"></canvas>
-              <canvas id="draw-lines" width="1280" height="720"></canvas>
+              <canvas id="draw-lines" width="1280" height="880"></canvas>
               <canvas id="canvas"></canvas>
             </div>
           </div>
